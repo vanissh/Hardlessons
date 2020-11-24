@@ -1,26 +1,24 @@
 'use strict';
 
 let lang = prompt('Choose language(ru/en)', 'ru');
+let ru = 'Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье';
+let en = 'Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday';
 
 if(lang.toLowerCase() === 'ru'){
-    console.log('Понедельник','Вторник','Среда',
-    'Четверг','Пятница','Суббота','Воскресенье');
+    console.log(ru);
 } else if(lang.toLowerCase() === 'en'){
-    console.log('Sunday','Monday','Tuesday','Wednesday',
-    'Thursday','Friday','Saturday');
+    console.log(en);
 } else {
     console.log('Input error');
 }
 
 switch(lang.toLowerCase()) {
     case('ru'):
-        console.log('Понедельник','Вторник','Среда',
-        'Четверг','Пятница','Суббота','Воскресенье');
+        console.log(ru);
     break;
 
     case('en'):
-        console.log('Sunday','Monday','Tuesday','Wednesday',
-    'Thursday','Friday','Saturday');
+        console.log(en);
     break;
 
     default: 
@@ -28,11 +26,8 @@ switch(lang.toLowerCase()) {
 }
 
 let weekDays = [
-    ['Понедельник','Вторник','Среда',
-'Четверг','Пятница','Суббота','Воскресенье'],
-
-    ['Sunday','Monday','Tuesday','Wednesday',
-    'Thursday','Friday','Saturday'],
+    [ru.split(',')],
+    [en.split(',')],
 ];
 
 (lang.toLowerCase() === 'ru')? console.log(weekDays[0].toString()):
