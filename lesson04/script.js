@@ -1,10 +1,10 @@
 'use strict';
 
-let data = ' 1234567888888888899999999999999999999999999999999999999999999999 ';
-let num = 55;
-let str = ' hello world';
+const data = ' 1234567888888888899999999999999999999999999999999999999999999999 ';
+const num = 55;
+const str = ' hello world';
 
-let getData = function(a){
+const getData = function(a){
     if(typeof(a) !== "string") {
         console.log('Input error: data is not a string');
         return undefined;
