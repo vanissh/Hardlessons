@@ -11,11 +11,37 @@ for (let i = 0; i < week.length; i++) {
         html = html.italics();
     }
 
-    if(date.getDay() === 0){
-        week[6] = week[6].bold();
-    } else if(date.getDay() === i+1){
-        html = html.bold();
-    }
+    'Понедельник'.bold();
+
+    // switch(true){
+    //     case(date.getDay() === 1):
+    //     week['Понедельник'] = week['Понедельник'].bold();
+    //     break;
+
+    //     case(date.getDay() === 2):
+    //     week['Вторник'] = week['Вторник'].bold();
+    //     break;
+
+    //     case(date.getDay() === 3):
+    //     week['Среда'] = week['Среда'].bold();
+    //     break;
+
+    //     case(date.getDay() === 4):
+    //     week['Четверг'] = week['Четверг'].bold();
+    //     break;
+
+    //     case(date.getDay() === 5):
+    //     week['Пятница'] = week['Пятница'].bold();
+    //     break;
+
+    //     case(date.getDay() === 6):
+    //     week['Суббота'] = week['Суббота'].bold();
+    //     break;
+
+    //     default:
+    //     week['Воскресенье'] = week['Воскресенье'].bold();
+    //     break;
+    // }
     
     const div = document.createElement('div');
     div.innerHTML = html;

@@ -44,17 +44,19 @@ const minArr = ['минута', 'минуты', 'минут'];
 const secArr = ['секунда', 'секунды', 'секунд'];
 
 function updateTime (){
-    let date = new Date();
+    const date = new Date();
 
-    let dd = date.getDate();
+    const dd = date.getDate();
     let weekDay = date.getDay();
 
-    let mm = date.getMonth();
+    const mm = date.getMonth();
     let month = mm;
 
-    let hh = date.getHours();
-    let min = date.getMinutes();
-    let sec = date.getSeconds();
+    const hh = date.getHours();
+    const min = date.getMinutes();
+    const sec = date.getSeconds();
+    
+    const yy = date.getFullYear();
 
     for(let key in newDate.month){
         if (month === +key){
@@ -97,14 +99,13 @@ function updateTime (){
         } 
     }
 
-    const yy = date.getFullYear();
     firstOption = 'Cегодня' + ' ' + weekDay + ', '+ dd +' ' + month + ' ' +
     yy + ' года' + ', '+ hh + ' ' + changeDeclination(hh, 'hour') + ' ' +
     min + ' '+ changeDeclination(min, 'min') + ' ' + sec + ' ' +
     changeDeclination(sec, 'sec');
 
     const secondOption = formatNumber(dd) + '.' + formatNumber(mm) + '.' + yy + ' - ' + 
-        formatNumber(hh) + ': ' + formatNumber(min) + ':' + formatNumber(sec);
+        formatNumber(hh) + ': ' + formatNumber(min) + ': ' + formatNumber(sec);
 
     firstEl.innerHTML = firstOption;
     secondEl.innerHTML = secondOption;
