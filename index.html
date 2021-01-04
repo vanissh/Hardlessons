@@ -1,0 +1,64 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Document</title>
+  <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: rgb(56, 56, 56);
+        color: white;
+        }
+    th, td {
+        padding: 10px 15px;
+    }
+    button {
+        background-color: rgb(56, 56, 56);
+        color: white;
+        padding: 6px 15px;
+        border: none;
+    }
+    button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    div {
+        margin-bottom: 30px;
+    }
+    
+  </style>
+
+  <script src="index.js" defer></script>
+ </head>
+
+
+
+ <body>
+    <div id="div1" style="display:inline-block">
+        <input type="text" id="mark" placeholder="Марка">
+        <input type="text" id="model" placeholder="Модель">
+        <input type="text" id="year" placeholder="Год выпуска">
+        <input type="text" id="mileage" placeholder="Пробег, км">
+        <button type="submit" id="button">Добавить авто</button>
+    </div>
+    <br>
+    <div id="div2" style="display:inline-block">
+        <input class="filter" type="text" id="fMark" placeholder="Марка">
+        <input class="filter" type="text" id="fModel" placeholder="Модель">
+        <input class="filter" type="text" id="fYear" placeholder="Год выпуска">
+        <input class="filter" type="text" id="fMileage" placeholder="Пробег, км">
+        <button type="submit" id="filter">Фильтр</button>
+        <button type="submit" id="reset">Сбросить</button>
+ </div>
+  <table>
+   <thead id="header">
+    <th>№</th>
+    <th id="hMark">Марка</th>
+    <th id="hModel">Модель</th>
+    <th id="hYear">Год выпуска</th>
+    <th id="hMileage">Пробег</th>
+  </thead>
+  <tbody id="body">
+  </tbody>
+  </table>
+  </body>
+  </html>
